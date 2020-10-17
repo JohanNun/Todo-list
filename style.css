@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 700px;
+    height: auto;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/* Principio header */
+
+#container header {
+    width: 100%;
+    height: 80px;
+    padding: 25px;
+    background-color: darkcyan;
+}
+
+#container header #btnFiltrar {
+    font-size: 11px;
+    padding: 2px 12px;
+    border-radius: 4px;
+}
+
+#container header .alerta {
+    width: 64%;
+    padding: 0 85px;
+    background-color: red;
+    color: white;
+}
+
+/* Fin header */
+
+
+
+/* Principio Main */
+
+main .filtroSecundario {
+    width: 100%;
+    height: 40px;
+    padding: 10px 25px;
+    background-color:gray;
+    border-top: 1px solid black;
+}
+
+main .mainTarea {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    
+}
+
+main .mainTarea .tarea{
+    background-color: lightcoral;
+    width: 75%;
+    padding: 25px;
+}
+
+main .mainTarea .eliminar{
+    width: 25%;
+    background-color: red;
+    padding: 25px 45px;
+    color: white; 
+    border-left: 1px solid black;
+}
+
+main .mainTarea .tareaDos{
+    background-color: lightgreen;
+    width: 75%;
+    padding: 25px;
+}
+
+/* Fin Main */
+
+
+/* Principio footer */
+
+footer div{
+    background-color: black;
+    width: 100%;
+    height: 45px;
+    padding: 10px 25px;
+}
+
+footer div h3{
+    color: white;
+    font-weight: 400;
+}
+
+/* Fin footer */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do's list</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+
+            <div class="filtro">
+
+                <form>
+                    <input type="text" placeholder="Introducir una tarea">
+
+                    <select id="prioridad">
+                        <option value="" selected>Seleccionar prioridad</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+
+                    </select>
+
+                    <input type="submit" id="btnFiltrar" value="GUARDAR">
+                </form>
+
+                <div class="alerta">Debes completar todos los campos!</div>
+
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <section id="segundoFiltro">
+
+                <div class="filtroSecundario">
+                    <select id="prioridadDos">
+                        <option value="" selected>Seleccionar prioridad</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+                    </select>
+
+                    <input type="text" id="buscarTarea" placeholder="Tarea a buscar">
+                </div>
+
+                <div class="mainTarea">
+                    <div class="tarea">
+                        <h3>Estudiar Javascript</h3>
+                    </div>
+                    <div class="eliminar">
+                        <h3>Eliminar</h3>
+                    </div>
+                </div>
+
+                <div class="mainTarea">
+                    <div class="tareaDos">
+                        <h3>Sacar el perro</h3>
+                    </div>
+                    <div class="eliminar">
+                        <h3>Eliminar</h3>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+        <footer>
+            <div>
+                <h3>To-do's App de Johan</h3>
+            </div>
+        </footer>
+
+
+    </div>
+
+
+
+    <script src="./JS/function.js"></script>
+    <script src="./JS/visual.js"></script>
+</body>
+
+</html>
