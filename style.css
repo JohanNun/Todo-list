@@ -14,7 +14,7 @@
 
 /* Principio header */
 
-#container header {
+#container header .filtro {
     width: 100%;
     height: 80px;
     padding: 25px;
@@ -32,6 +32,15 @@
     padding: 0 85px;
     background-color: red;
     color: white;
+    display: none;
+}
+
+header .filtroSecundario {
+    width: 100%;
+    height: 40px;
+    padding: 10px 25px;
+    background-color:gray;
+    border-top: 1px solid black;
 }
 
 /* Fin header */
@@ -40,13 +49,7 @@
 
 /* Principio Main */
 
-main .filtroSecundario {
-    width: 100%;
-    height: 40px;
-    padding: 10px 25px;
-    background-color:gray;
-    border-top: 1px solid black;
-}
+
 
 main .mainTarea {
     flex-wrap: wrap;
@@ -58,7 +61,7 @@ main .mainTarea {
 }
 
 main .mainTarea .tarea{
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     width: 75%;
     padding: 25px;
 }
@@ -71,12 +74,24 @@ main .mainTarea .eliminar{
     border-left: 1px solid black;
 }
 
-main .mainTarea .tareaDos{
-    background-color: lightgreen;
-    width: 75%;
-    padding: 25px;
+main .mainTarea .eliminar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
 }
 
+.urgente {
+    background-color: lightcoral;
+}
+
+.diaria {
+    background-color: lightblue;
+}
+
+.mensual {
+    background-color: lightgreen;
+}
 /* Fin Main */
 
 
@@ -95,3 +110,5 @@ footer div h3{
 }
 
 /* Fin footer */
+
+

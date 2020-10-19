@@ -18,7 +18,7 @@
             <div class="filtro">
 
                 <form>
-                    <input type="text" placeholder="Introducir una tarea">
+                    <input id="introTarea" type="text" placeholder="Introducir una tarea">
 
                     <select id="prioridad">
                         <option value="" selected>Seleccionar prioridad</option>
@@ -35,6 +35,16 @@
 
             </div>
 
+            <div class="filtroSecundario">
+                <select id="prioridadDos">
+                    <option value="" selected>Seleccionar prioridad</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="diaria">Diaria</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+
+                <input type="text" id="buscarTarea" placeholder="Tarea a buscar">
+            </div>
         </header>
 
 
@@ -42,23 +52,12 @@
 
             <section id="segundoFiltro">
 
-                <div class="filtroSecundario">
-                    <select id="prioridadDos">
-                        <option value="" selected>Seleccionar prioridad</option>
-                        <option value="urgente">Urgente</option>
-                        <option value="diaria">Diaria</option>
-                        <option value="mensual">Mensual</option>
-                    </select>
-
-                    <input type="text" id="buscarTarea" placeholder="Tarea a buscar">
-                </div>
-
-                <div class="mainTarea">
+                <!-- <div class="mainTarea">
                     <div class="tarea">
                         <h3>Estudiar Javascript</h3>
                     </div>
                     <div class="eliminar">
-                        <h3>Eliminar</h3>
+                        <a href="#">Eliminar</a>
                     </div>
                 </div>
 
@@ -69,7 +68,7 @@
                     <div class="eliminar">
                         <h3>Eliminar</h3>
                     </div>
-                </div>
+                </div> -->
 
 
             </section>
