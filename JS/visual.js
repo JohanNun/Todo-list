@@ -29,15 +29,12 @@ function recogerTarea(event) {
 function eliminarTarea(event) {
     event.preventDefault();
 
-    /* event.target.parentNode.parentNode.removeChild(event.target.parentNode);
+    event.target.parentNode.parentNode.remove();
     let borrarId = event.target.parentNode.id;
     let posicion = listaTarea.findIndex(tarea => {
         tarea.id == borrarId;
-    }) */
+    })
 
-    let nodeAborrar = document.querySelector('.mainTarea');
-    nodeAborrar.outerHTML = "";
-
-    /* listaTarea.splice(posicion, 1); */
+    listaTarea.splice(posicion, 1);
 }
 

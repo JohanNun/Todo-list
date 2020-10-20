@@ -29,18 +29,34 @@ function printEvento(pInput, pPrioridad) {
     const prioridad = pPrioridad;
 
     if (resultado != "") {
-        section.innerHTML += `<div id=${id} class="mainTarea">
-        <div class="tarea ${pPrioridad}">
-            <h3>${pInput}</h3>
-        </div>
-        <div class="eliminar">
-        <a class="btnEliminar" href="#">Eliminar</a>
-        </div>
-    </div>`
+
+        let divMain = document.createElement('div');
+        divMain.id = `${id}`;
+        divMain.className = "mainTarea";
+
+        let div2 = document.createElement('div');
+        div2.className = `tarea ${pPrioridad}`;
+        let h3Input = document.createElement('h3');
+        h3Input.innerText = `${pInput}`;
+
+        let divEliminar = document.createElement('div');
+        divEliminar.className = "eliminar";
+
+        let a = document.createElement('a');
+        a.className = `btnEliminar`;
+        a.href = "#";
+        a.innerText = "Eliminar";
+        a.addEventListener('click', eliminarTarea);
+
+        divEliminar.appendChild(a);
+        divMain.appendChild(div2);
+        div2.appendChild(h3Input);
+        divMain.appendChild(divEliminar);
+        section.appendChild(divMain);
+
+
         alerta.style.display = "none";
 
-        let btnEliminar = document.querySelector('.btnEliminar');
-        btnEliminar.addEventListener('click', eliminarTarea);
     }
 
 }
