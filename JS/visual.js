@@ -38,3 +38,31 @@ function eliminarTarea(event) {
     listaTarea.splice(posicion, 1);
 }
 
+
+
+
+
+
+
+const selector = document.querySelector('#prioridadDos');
+selector.addEventListener('change', SelectionarPrioridad);
+
+function SelectionarPrioridad(event) {
+
+    mostrarEventos(filtrarPorPrioridad(listaTarea, event.target.value));
+
+}
+
+
+
+const buscador = document.querySelector('#buscarTarea');
+buscador.addEventListener('input', buscarPalabra);
+
+function buscarPalabra(event) {
+    let palabra = event.target.value;
+
+    let listaFiltrada = filtrarPorPalabra(listaTarea, palabra);
+    mostrarEventos(listaFiltrada);
+}
+
+

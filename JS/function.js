@@ -23,43 +23,59 @@ const section = document.querySelector('#segundoFiltro');
 const alerta = document.querySelector('.alerta');
 
 
+
+function mostrarEventos(pLista) {
+
+    pSection = section;
+
+    pSection.innerHTML = "";
+    pLista.forEach(elemento => {
+        printEvento(elemento.titulo, elemento.prioridad);
+    })
+
+}
+
+
+
 function printEvento(pInput, pPrioridad) {
 
     const resultado = pInput;
     const prioridad = pPrioridad;
 
-    if (resultado != "") {
+    /* if (resultado != "") { */
 
-        let divMain = document.createElement('div');
-        divMain.id = `${id}`;
-        divMain.className = "mainTarea";
+    let divMain = document.createElement('div');
+    divMain.id = `${id}`;
+    divMain.className = "mainTarea";
 
-        let div2 = document.createElement('div');
-        div2.className = `tarea ${pPrioridad}`;
-        let h3Input = document.createElement('h3');
-        h3Input.innerText = `${pInput}`;
+    let div2 = document.createElement('div');
+    div2.className = `tarea ${pPrioridad}`;
+    let h3Input = document.createElement('h3');
+    h3Input.innerText = `${pInput}`;
 
-        let divEliminar = document.createElement('div');
-        divEliminar.className = "eliminar";
+    let divEliminar = document.createElement('div');
+    divEliminar.className = "eliminar";
 
-        let a = document.createElement('a');
-        a.className = `btnEliminar`;
-        a.href = "#";
-        a.innerText = "Eliminar";
-        a.addEventListener('click', eliminarTarea);
+    let a = document.createElement('a');
+    a.className = `btnEliminar`;
+    a.href = "#";
+    a.innerText = "Eliminar";
+    a.addEventListener('click', eliminarTarea);
 
-        divEliminar.appendChild(a);
-        divMain.appendChild(div2);
-        div2.appendChild(h3Input);
-        divMain.appendChild(divEliminar);
-        section.appendChild(divMain);
+    divEliminar.appendChild(a);
+    divMain.appendChild(div2);
+    div2.appendChild(h3Input);
+    divMain.appendChild(divEliminar);
+    section.appendChild(divMain);
 
 
-        alerta.style.display = "none";
+    alerta.style.display = "none";
 
-    }
+    /*  } */
 
 }
+
+
 
 function addEvento(pInput, pPrioridad) {
 
@@ -80,6 +96,30 @@ function addEvento(pInput, pPrioridad) {
         id++;
     }
 
+}
+
+
+
+
+
+
+
+function filtrarPorPrioridad(pLista, pPrioridad) {
+
+    const result = pLista.filter(tarea => tarea.prioridad == pPrioridad.toLowerCase());
+
+    return result;
+
+}
+
+
+
+function filtrarPorPalabra(pLista, pInput) {
+    const listaFiltrada = pLista.filter(tarea => {
+        return tarea.titulo.toLowerCase().includes(pInput.toLowerCase());
+    })
+
+    return listaFiltrada;
 }
 
 
